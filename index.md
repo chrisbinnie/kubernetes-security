@@ -46,7 +46,7 @@ share: true
 related: true
 ---
 
-# Kubernetes Security Guide: Complete Container Orchestration Hardening & Protection
+# Chris Binnie - Kubernetes Security: Container Orchestration Hardening & Protection
 
 Secure your Kubernetes infrastructure with this comprehensive security guide from my working notes. Learn essential hardening techniques including RBAC, network policies, and defence strategies for production clusters. This guide covers critical security domains from basic setup to advanced threat protection across all Kubernetes environments.
 
