@@ -694,9 +694,9 @@ For foundational server security that supports your Kubernetes nodes, refer to t
 
 ### About the Author
 
-Author of Cloud Native Security and Kubernetes Security books, with extensive experience in enterprise container security implementations and Kubernetes security assessments.
+Author of Cloud Native Security and other cybersecurity books, with extensive experience in enterprise container security implementations and Kubernetes security assessments.
 
-Linux® is the registered trademark of Linus Torvalds. Kubernetes® is a registered trademark of The Linux Foundation. Use the information found on these pages at your own risk.
+Linux® is the registered trademark of Linus Torvalds. Kubernetes® is a registered trademark of The Linux Foundation. Use the information from my notes found on these pages at your own risk.
 
 ### Related
 
