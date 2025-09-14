@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kubernetes Security Guide: Complete Container Orchestration Hardening & Protection"
+title: "Kubernetes Security by Chris Binnie - Container Orchestration Hardening"
 description: "Comprehensive Kubernetes security guide covering RBAC, network policies, pod security standards, runtime protection, and compliance. Essential hardening techniques for production clusters."
 date: 2025-09-10
 author: "Chris Binnie"
