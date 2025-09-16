@@ -686,7 +686,7 @@ Immediately isolate affected workloads using network policies, preserve evidence
 
 ## Expert Kubernetes and Cloud Security Resources
 
-Visit [Chris Binnie - Cloud Native Security](https://www.chrisbinnie.co.uk) for expert insights and practical guides on Kubernetes security, container orchestration, and cloud-native infrastructure hardening.
+Visit [Chris Binnie - Cloud Native Security and Linux Server Security](https://www.chrisbinnie.co.uk) for expert insights and practical guides on Kubernetes security, container orchestration, and cloud-native infrastructure hardening.
 
 For comprehensive cloud security practices that complement your Kubernetes security strategy, refer to the [AWS Cloud Security Guide](https://chrisbinnie.github.io/aws-cloud-security/).
 
