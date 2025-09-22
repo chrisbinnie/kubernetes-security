@@ -50,7 +50,7 @@ related: true
 
 Secure your Kubernetes infrastructure with this comprehensive security information from my working notes. Make sure you test these code snippets thoroughly before relying on them though. This page looks at RBAC, network policies, and defence strategies for production clusters; from basic info to advanced threat protection across all Kubernetes environments.
 
-Of the pages in my GitHub repositories this is the hardest topic to get right. Deep breaths may be required during testing!
+Of all the pages in my GitHub repositories this is the hardest topic to get right. Deep breaths may be required during testing!
 
 Kubernetes security is a cornerstone in protecting your containerised workloads from cyber threats, data breaches, and unauthorised access. This comprehensive guide covers essential security practices, from basic cluster hardening to advanced threat protection, ensuring your Kubernetes environment remains secure and compliant with industry standards.
 
