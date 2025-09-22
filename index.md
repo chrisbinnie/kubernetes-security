@@ -254,7 +254,7 @@ spec:
               number: 80
 ```
 
-**Important Tip**: You MUST test network policies in a staging environment before applying tgem to production, as overly restrictive policies can break application functionality.
+**Important Tip**: You MUST test network policies in a test environment before applying them to production, as overly restrictive policies can break application functionality.
 
 ## Pod Security Standards
 
