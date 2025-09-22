@@ -50,6 +50,8 @@ related: true
 
 Secure your Kubernetes infrastructure with this comprehensive security information from my working notes. Make sure you test these code snippets thoroughly before relying on them though. This page looks at RBAC, network policies, and defence strategies for production clusters; from basic info to advanced threat protection across all Kubernetes environments.
 
+Of the pages in my GitHub repositories this is the hardest topic to get right. Deep breaths may be required during testing!
+
 Kubernetes security is a cornerstone in protecting your containerised workloads from cyber threats, data breaches, and unauthorised access. This comprehensive guide covers essential security practices, from basic cluster hardening to advanced threat protection, ensuring your Kubernetes environment remains secure and compliant with industry standards.
 
 Whether you're managing self-hosted clusters, EKS, GKE, or AKS environments, these security principles apply across all Kubernetes distributions and will help you build a robust defence against modern cyber threats in cloud-native environments.
@@ -123,7 +125,7 @@ protectKernelDefaults: true
 
 ## Authentication and Authorisation
 
-Implement robust RBAC (Role-Based Access Control) policies:
+Implement robust RBAC (Role-Based Access Control) policies, but go steadily carefully and test repeatedly:
 
 ```yaml
 # Service account with minimal privileges
@@ -335,7 +337,7 @@ spec:
 
 ## Secrets and Configuration Management
 
-Secure secrets management:
+Secure secrets management, hard to get right but imperative:
 
 ```yaml
 # Kubernetes secret with proper labelling
@@ -490,7 +492,7 @@ spec:
           path: /boot
 ```
 
-Custom Falco rules:
+Custom Falco rules, the clever, popular open source kernel-integrated agent, discussed in my third book, linked to below:
 
 ```yaml
 # Security monitoring rules
@@ -611,7 +613,7 @@ kubectl get events -n $NAMESPACE --sort-by='.lastTimestamp' > /tmp/events-$(date
 echo "Initial response complete. Evidence preserved in /tmp/"
 ```
 
-Configure alerting systems:
+Configure alerting systems, which helps on many levels after deployments:
 
 ```yaml
 # Alertmanager configuration for security incidents
