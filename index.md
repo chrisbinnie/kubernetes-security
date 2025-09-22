@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Kubernetes Security by Chris Binnie - Container Orchestration Hardening"
-description: "Comprehensive Kubernetes security guide covering RBAC, network policies, pod security standards, runtime protection, and compliance. Essential hardening techniques for production clusters."
-date: 2025-09-10
+description: "Comprehensive Kubernetes security covering RBAC, network policies, pod security standards, runtime protection, and compliance. Essential hardening techniques for production clusters."
+date: 2025-09-21
 author: "Chris Binnie"
 categories: [kubernetes, security, devops, containers]
 tags: [kubernetes-security, container-security, rbac, network-policies, pod-security, runtime-security, falco, opa-gatekeeper, compliance, threat-detection]
@@ -20,7 +20,7 @@ schema:
   "@context": "https://schema.org"
   "@type": "TechnicalArticle"
   "headline": "Kubernetes Security Guide: Complete Container Orchestration Hardening & Protection"
-  "description": "Comprehensive guide to securing Kubernetes clusters with RBAC, network policies, pod security standards, and runtime protection strategies"
+  "description": "Comprehensive information for securing Kubernetes clusters with RBAC, network policies, pod security standards, and runtime protection strategies"
   "author":
     "@type": "Person"
     "name": "Chris Binnie"
@@ -48,9 +48,9 @@ related: true
 
 # Chris Binnie - Kubernetes Security: Container Orchestration Hardening & Protection
 
-Secure your Kubernetes infrastructure with this comprehensive security guide from my working notes. Learn essential hardening techniques including RBAC, network policies, and defence strategies for production clusters. This guide covers critical security domains from basic setup to advanced threat protection across all Kubernetes environments.
+Secure your Kubernetes infrastructure with this comprehensive security information from my working notes. Make sure you test these code snippets thoroughly before relying on them though. This page looks at RBAC, network policies, and defence strategies for production clusters; from basic info to advanced threat protection across all Kubernetes environments.
 
-Kubernetes security is fundamental for protecting your containerised workloads from cyber threats, data breaches, and unauthorised access. This comprehensive guide covers essential security practices, from basic cluster hardening to advanced threat protection, ensuring your Kubernetes environment remains secure and compliant with industry standards.
+Kubernetes security is a cornerstone in protecting your containerised workloads from cyber threats, data breaches, and unauthorised access. This comprehensive guide covers essential security practices, from basic cluster hardening to advanced threat protection, ensuring your Kubernetes environment remains secure and compliant with industry standards.
 
 Whether you're managing self-hosted clusters, EKS, GKE, or AKS environments, these security principles apply across all Kubernetes distributions and will help you build a robust defence against modern cyber threats in cloud-native environments.
 
@@ -119,7 +119,7 @@ readOnlyPort: 0
 protectKernelDefaults: true
 ```
 
-**Security Tip**: Always run CIS Kubernetes Benchmark assessments to identify configuration weaknesses and ensure compliance with security best practices.
+**Top Tip**: Run CIS Kubernetes Benchmark assessments to identify configuration weaknesses and ensure compliance with security best practices.
 
 ## Authentication and Authorisation
 
@@ -252,7 +252,7 @@ spec:
               number: 80
 ```
 
-**Security Tip**: Always test network policies in a staging environment before applying to production, as overly restrictive policies can break application functionality.
+**Important Tip**: You MUST test network policies in a staging environment before applying tgem to production, as overly restrictive policies can break application functionality.
 
 ## Pod Security Standards
 
@@ -446,7 +446,7 @@ spec:
   - name: registry-credentials
 ```
 
-**Security Tip**: Always use specific image tags or SHA digests instead of 'latest' to ensure consistency and prevent supply chain attacks.
+**Useful Tip**: Always use specific image tags or SHA digests instead of 'latest' to ensure consistency and prevent supply chain attacks.
 
 ## Runtime Security
 
