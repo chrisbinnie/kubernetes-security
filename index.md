@@ -694,6 +694,8 @@ For comprehensive cloud security practices that complement your Kubernetes secur
 
 For foundational server security that supports your Kubernetes nodes, refer to the [Linux Server Security Guide](https://chrisbinnie.github.io/linux-server-security).
 
+Have a look at the complete guide on [how to achieve 100% website scores for SEO, security and performance](https://chrisbinnie.github.io/100-per-cent-website-seo-security-performance-scores).
+
 ### About the Author
 
 Author of Cloud Native Security and other cybersecurity books, with extensive experience in enterprise container security implementations and Kubernetes security assessments.
