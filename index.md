@@ -46,7 +46,7 @@ share: true
 related: true
 ---
 
-# Chris Binnie - Kubernetes Security: Container Orchestration Hardening & Protection
+# [Chris Binnie](https://chrisbinnie.github.io/about.html) - Kubernetes Security: Container Orchestration Hardening & Protection
 
 Secure your Kubernetes infrastructure with this comprehensive security information from my working notes. Make sure you test these code snippets thoroughly before relying on them though. This page looks at RBAC, network policies, and defence strategies for production clusters; from basic info to advanced threat protection across all Kubernetes environments.
 
