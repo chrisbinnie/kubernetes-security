@@ -56,6 +56,8 @@ Kubernetes security is a cornerstone in protecting your containerised workloads 
 
 Whether you're managing self-hosted clusters, EKS, GKE, or AKS environments, these security principles apply across all Kubernetes distributions and will help you build a robust defence against modern cyber threats in cloud-native environments.
 
+Updated 22nd March 2026: Ingress controller using nginx officially deprecated, code snippet updated.
+
 ## Table of Contents
 
 - [Cluster Hardening Fundamentals](#cluster-hardening-fundamentals)
@@ -226,32 +228,44 @@ spec:
 Configure secure ingress with TLS:
 
 ```yaml
-# Secure ingress configuration
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+# Secure ingress configuration using Gateway API
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
 metadata:
-  name: secure-ingress
+  name: secure-gateway
   namespace: production
-  annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/enable-modsecurity: "true"
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
-  tls:
-  - hosts:
-    - app.example.com
-    secretName: app-tls-secret
+  gatewayClassName: <your-gateway-class>  # e.g. cilium, envoy, nginx
+  listeners:
+  - name: https
+    port: 443
+    protocol: HTTPS
+    tls:
+      mode: Terminate
+      certificateRefs:
+      - name: app-tls-secret
+    allowedRoutes:
+      namespaces:
+        from: Same
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: secure-route
+  namespace: production
+spec:
+  parentRefs:
+  - name: secure-gateway
+  hostnames:
+  - "app.example.com"
   rules:
-  - host: app.example.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: web-app-service
-            port:
-              number: 80
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+    backendRefs:
+    - name: web-app-service
+      port: 80       
 ```
 
 **Important Tip**: You MUST test network policies in a test environment before applying them to production, as overly restrictive policies can break application functionality.
@@ -473,7 +487,7 @@ spec:
       serviceAccount: falco
       containers:
       - name: falco
-        image: falcosecurity/falco:latest
+        image: falcosecurity/falco:xx.xx
         securityContext:
           privileged: true
         volumeMounts:
